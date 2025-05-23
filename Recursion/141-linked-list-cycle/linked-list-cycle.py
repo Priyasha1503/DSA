@@ -4,7 +4,7 @@
 #         self.val = x
 #         self.next = None
 
-'''lass Solution:
+class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
         if head is None:
             return False
@@ -17,10 +17,11 @@
             else:
                 sets.add(temp)
             temp=temp.next
-        return False '''
+        return False 
     
                     
-class Solution:
+'''class Solution:
+
     def hasCycle(self, head: Optional[ListNode]) -> bool:
         if head is None:
             return None
@@ -30,10 +31,7 @@ class Solution:
             fast=fast.next.next
             if slow==fast:
                return True
-        
-
-        return False
-
+        return False'''
 
 
 
