@@ -28,4 +28,12 @@ class Solution:
             return res
         return path(root,[],[])
 
+
+ '''1. Why res.append(ans[:]) instead of res.append(ans)?
+When using backtracking, the list ans keeps changing as recursion unfolds. If you append ans directly, you're adding a reference — so future changes to ans will reflect in res. Using ans[:] creates a shallow copy (a snapshot) of the current state. This ensures that previously added paths in res stay unchanged, even as ans backtracks.
+
+ 2. Why not use res as a global variable?
+Using a global res can lead to bugs, especially when functions are called multiple times (e.g., during test cases). Globals retain old values unless manually cleared, making results unpredictable. It also breaks encapsulation — the function becomes harder to debug, test, and reuse. Keeping res local (as a parameter or return value) ensures clean, controlled recursion.
+
+'''
             
