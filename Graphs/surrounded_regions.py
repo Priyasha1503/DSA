@@ -48,3 +48,26 @@ class Solution:
                             board[i][j]='X'
 
 
+'''📝 Notes for Optimization & Design Decisions:
+Is this optimal?
+✅ Yes, it's optimal. The algorithm uses BFS with O(m × n) time and space complexity, visiting each cell at most once. This is as efficient as it gets for this problem.
+
+Is using both vis and region fine?
+🟡 It's fine, but slightly redundant.
+
+vis ensures global cells aren't revisited.
+
+region tracks the current region for possible flipping.
+➕ Keeps logic clean and separation clear.
+🔁 You could reuse vis alone and store the region in a list temporarily (or mark directly), but that risks mixing responsibilities or making code messier.
+
+Should I just update the grid directly?
+🟢 If you want to reduce space, yes—mark visited 'O's that touch boundaries directly (e.g., with 'B') during traversal. After traversal:
+
+Convert all 'O' → 'X' (they're surrounded)
+
+Convert all 'B' → 'O' (they were safe)
+
+🧼 This in-place marking approach avoids extra region storage and is slightly more space-efficient and commonly seen in optimal LeetCode solutions.
+
+'''
