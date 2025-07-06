@@ -1,6 +1,3 @@
-
-#https://leetcode.com/problems/remove-element/submissions/
-
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
         if len(nums)==1 and nums[0]==val:
@@ -21,3 +18,17 @@ class Solution:
                 first+=1
 
         return last+1
+
+
+##clean and most optimal version iutseems...by chatgpt..
+'''class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        i = 0
+        n = len(nums)
+        while i < n:
+            if nums[i] == val:
+                nums[i] = nums[n - 1]
+                n -= 1
+            else:
+                i += 1
+        return n '''
