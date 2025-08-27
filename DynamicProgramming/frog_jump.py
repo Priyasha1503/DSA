@@ -1,4 +1,5 @@
 
+
 #https://www.geeksforgeeks.org/problems/geek-jump/1
 
 #User function Template for python3
