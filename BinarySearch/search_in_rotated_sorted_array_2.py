@@ -1,5 +1,5 @@
 
-#https://leetcode.com/problems/search-in-rotated-sorted-array/submissions/1822602926/
+#https://leetcode.com/problems/search-in-rotated-sorted-array-ii/
 
 class Solution:
     def search(self, nums: List[int], target: int) -> bool:
